@@ -1,9 +1,126 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
   <diagram name="Page-1" id="z7SUv-nckDjTanaEsamw">
-    <mxGraphModel>
+    <mxGraphModel dx="1467" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="K_xvDX703biOcKyKZMoH-27" value="" style="ellipse;fillColor=strokeColor;" vertex="1" parent="1">
+          <mxGeometry x="185" y="50" width="14" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-28" value="Initialization" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;startSize=25;container=0;collapsible=0;rounded=1;arcSize=14;dropTarget=0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="50" y="137" width="285" height="261" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-29" value="Ensures mapper function is not null. &#xa;Prevents null pointer exceptions." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-28">
+          <mxGeometry x="46" y="43" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-30" value="Creates a stateless stream operation &#xa;with specific optimization flags." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-28">
+          <mxGeometry x="48" y="163" width="206" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-31" value="StreamProcessing" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;startSize=25;container=0;collapsible=0;rounded=1;arcSize=14;dropTarget=0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="570" y="50" width="477" height="1365" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-32" value="Creates a chained sink&#xa; to process stream elements." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-31">
+          <mxGeometry x="146" y="46" width="200" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-33" value="AcceptMethod" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;startSize=25;container=0;collapsible=0;rounded=1;arcSize=14;dropTarget=0;verticalAlign=top;" vertex="1" parent="K_xvDX703biOcKyKZMoH-31">
+          <mxGeometry x="43" y="173" width="407" height="1161" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-34" value="Applies transformation function&#xa;to each input element." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-33">
+          <mxGeometry x="121" y="58" width="181" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-35" value="Verifies the mapped result&#xa;is not null before processing." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-33">
+          <mxGeometry x="107" y="228" width="208" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-36" value="ProcessResult" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;startSize=25;container=0;collapsible=0;rounded=1;arcSize=14;dropTarget=0;verticalAlign=top;" vertex="1" parent="K_xvDX703biOcKyKZMoH-33">
+          <mxGeometry x="43" y="398" width="337" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-37" value="Converts stream to sequential &#xa;for predictable processing." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-36">
+          <mxGeometry x="75" y="71" width="203" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-38" value="Iterates through transformed&#xa;stream elements." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-36">
+          <mxGeometry x="97" y="266" width="158" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-39" value="CancellationCheck" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;startSize=25;container=0;collapsible=0;rounded=1;arcSize=14;dropTarget=0;verticalAlign=top;" vertex="1" parent="K_xvDX703biOcKyKZMoH-36">
+          <mxGeometry x="43" y="461" width="267" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-40" value="Monitors and responds&#xa;to cancellation requests." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-39">
+          <mxGeometry x="43" y="83" width="197" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-41" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="K_xvDX703biOcKyKZMoH-36" source="K_xvDX703biOcKyKZMoH-37" target="K_xvDX703biOcKyKZMoH-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-42" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="K_xvDX703biOcKyKZMoH-36" source="K_xvDX703biOcKyKZMoH-38" target="K_xvDX703biOcKyKZMoH-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-43" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="K_xvDX703biOcKyKZMoH-33" source="K_xvDX703biOcKyKZMoH-34" target="K_xvDX703biOcKyKZMoH-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-44" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=1.01;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="K_xvDX703biOcKyKZMoH-33" source="K_xvDX703biOcKyKZMoH-35" target="K_xvDX703biOcKyKZMoH-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-45" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=0.98;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="K_xvDX703biOcKyKZMoH-31" source="K_xvDX703biOcKyKZMoH-32" target="K_xvDX703biOcKyKZMoH-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-46" value="DecisionPoints" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;startSize=25;container=0;collapsible=0;rounded=1;arcSize=14;dropTarget=0;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="120" width="275" height="291" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-47" value="Decides stream processing &#xa;based on null/non-null results." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-46">
+          <mxGeometry x="43" y="46" width="205" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-48" value="Determines whether to &#xa;continue or stop processing." style="rounded=1;arcSize=40;strokeWidth=2" vertex="1" parent="K_xvDX703biOcKyKZMoH-46">
+          <mxGeometry x="54" y="191" width="182" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-49" value="" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="K_xvDX703biOcKyKZMoH-46" source="K_xvDX703biOcKyKZMoH-47" target="K_xvDX703biOcKyKZMoH-48">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-51" value="Method Entry" style="curved=1;startArrow=none;;exitX=0.53;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="K_xvDX703biOcKyKZMoH-27" target="K_xvDX703biOcKyKZMoH-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-52" value="Prepare Stream Operation" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;entryX=0.533;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="K_xvDX703biOcKyKZMoH-28" target="K_xvDX703biOcKyKZMoH-31">
+          <mxGeometry x="-0.1156" y="10" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="470" />
+              <mxPoint x="490" y="190" />
+              <mxPoint x="440" y="20" />
+              <mxPoint x="600" y="10" />
+            </Array>
+            <mxPoint x="160" y="390" as="sourcePoint" />
+            <mxPoint x="830" y="10" as="targetPoint" />
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-53" value="Stream Decision-Making" style="curved=1;startArrow=none;;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="K_xvDX703biOcKyKZMoH-31" target="K_xvDX703biOcKyKZMoH-46">
+          <mxGeometry x="0.5162" y="-50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="1480" />
+              <mxPoint x="1160" y="1490" />
+              <mxPoint x="1080" y="290" />
+              <mxPoint x="1230" y="-10" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K_xvDX703biOcKyKZMoH-54" value="Stream Processing Complete" style="curved=1;startArrow=none;;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1348" y="411" as="sourcePoint" />
+            <mxPoint x="1348" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
